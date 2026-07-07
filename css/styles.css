@@ -23,7 +23,6 @@ body {
     padding: 0;
     -webkit-font-smoothing: antialiased;
     transition: background-color 0.3s ease, color 0.3s ease;
-    cursor: url('img/up-sign.png') 0 0, pointer;
 }
 
 body.is-loading main {
@@ -143,7 +142,6 @@ header h1 {
 }
 
 .title-word-effect {
-    cursor: url("img/up-sign.png") 0 0, pointer;
     line-height: 1.4;
 }
 
@@ -171,7 +169,6 @@ button {
     color: var(--button-text);
     border: 2px solid var(--text-color);
     padding: 8px 16px;
-    cursor: url("img/hand.png") 0 0, pointer;
     font-weight: bold;
     transition: all 0.2s ease;
 }
@@ -300,7 +297,6 @@ body[data-theme="dark"] .lamp-toggle[aria-pressed="true"] .lamp-base {
     font-size: 0.95rem;
     outline: none;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    cursor: url('img/text.png') 0 0, text;
 }
 
 .search-input:focus {
@@ -335,7 +331,6 @@ body[data-theme="dark"] .lamp-toggle[aria-pressed="true"] .lamp-base {
     color: var(--text-color);
     text-align: left;
     font-size: 0.95rem;
-    cursor: url("img/hand.png") 0 0, pointer;
 }
 
 .search-suggestion:hover {
@@ -375,7 +370,6 @@ body[data-theme="dark"] .lamp-toggle[aria-pressed="true"] .lamp-base {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
-    cursor: url("img/grab.png") 0 0, pointer;
     text-decoration: none;
     color: inherit;
     display: flex;
@@ -538,7 +532,6 @@ body[data-theme="dark"] .lamp-toggle[aria-pressed="true"] .lamp-base {
     background: var(--text-color);
     color: var(--bg-color);
     transform: translateY(-1px);
-    cursor: url('img/grab.png') 0 0, pointer;
 }
 
 .side-menu {
@@ -579,7 +572,6 @@ body[data-theme="dark"] .lamp-toggle[aria-pressed="true"] .lamp-base {
     text-decoration: none;
     font-weight: bold;
     padding: 8px 0;
-    cursor: url("img/up-sign.png") 0 0, pointer;
     transition: color 0.2s ease;
 }
 
