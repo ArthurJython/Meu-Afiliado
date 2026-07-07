@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "img": "../img/caixas.webp",
+    "img": "img/caixas.webp",
     "link": "https://seulinkdeafiliado.com/produto1",
     "title": {
       "pt": "Cadeira Ergonômica",
@@ -17,7 +17,7 @@
   },
   {
     "id": 2,
-    "img": "../img/caixas.webp",
+    "img": "img/caixas.webp",
     "link": "https://seulinkdeafiliado.com/produto2",
     "title": {
       "pt": "Monitor Ultrawide",
@@ -33,7 +33,7 @@
   },
   {
     "id": 3,
-    "img": "../img/caixas.webp",
+    "img": "img/caixas.webp",
     "link": "https://seulinkdeafiliado.com/produto3",
     "title": {
       "pt": "Teclado Mecânico",
@@ -49,7 +49,7 @@
   },
   {
     "id": 4,
-    "img": "../img/caixas.webp",
+    "img": "img/caixas.webp",
     "link": "https://seulinkdeafiliado.com/produto4",
     "title": {
       "pt": "Webcam 4K",
@@ -65,7 +65,7 @@
   },
   {
     "id": 5,
-    "img": "../img/caixas.webp",
+    "img": "img/caixas.webp",
     "link": "https://seulinkdeafiliado.com/produto5",
     "title": {
       "pt": "Headset Sem Fio",
@@ -81,7 +81,7 @@
   },
   {
     "id": 6,
-    "img": "../img/caixas.webp",
+    "img": "img/caixas.webp",
     "link": "https://seulinkdeafiliado.com/produto6",
     "title": {
       "pt": "Mesa de Escritório",
@@ -97,7 +97,7 @@
   },
   {
     "id": 7,
-    "img": "../img/caixas.webp",
+    "img": "img/caixas.webp",
     "link": "https://seulinkdeafiliado.com/produto7",
     "title": {
       "pt": "Luminária LED",
@@ -113,7 +113,7 @@
   },
   {
     "id": 8,
-    "img": "../img/caixas.webp",
+    "img": "img/caixas.webp",
     "link": "https://seulinkdeafiliado.com/produto8",
     "title": {
       "pt": "Estojo de Organização",
@@ -129,7 +129,7 @@
   },
   {
     "id": 9,
-    "img": "../img/caixas.webp",
+    "img": "img/caixas.webp",
     "link": "https://seulinkdeafiliado.com/produto9",
     "title": {
       "pt": "Notebook Portátil",
@@ -145,7 +145,7 @@
   },
   {
     "id": 10,
-    "img": "../img/caixas.webp",
+    "img": "img/caixas.webp",
     "link": "https://seulinkdeafiliado.com/produto10",
     "title": {
       "pt": "Carregador Sem Fio",
