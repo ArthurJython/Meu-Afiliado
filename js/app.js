@@ -168,7 +168,7 @@ function renderProducts({ useLoader = false } = {}) {
             card.className = `product-card ${prod.categoryClass || ''}`;
 
             card.innerHTML = `
-                <img class="store-icon" src="../img/mercadolivre.png" alt="Mercado Livre">
+                <img class="store-icon" src="img/mercadolivre.png" alt="Mercado Livre">
                 <div class="product-badges">
                     <span class="product-status available">Disponível</span>
                     ${prod.discount ? `<span class="product-discount">-${prod.discount}</span>` : ''}
@@ -276,9 +276,9 @@ document.querySelectorAll('.side-menu a').forEach(link => {
 async function initApp() {
     try {
         const [productsResponse, translationsResponse, configResponse] = await Promise.all([
-            fetch('../data/products.json'),
-            fetch('../data/translations.json'),
-            fetch('../data/config.json')
+            fetch('data/products.json'),
+            fetch('data/translations.json'),
+            fetch('data/config.json')
         ]);
 
         products = await productsResponse.json();
