@@ -29,7 +29,7 @@
 
     <aside id="sideMenu" class="side-menu" aria-hidden="true">
         <div class="side-menu-header">
-            <h2>Pesquisa</h2>
+            <h2>Menu</h2>
             <button id="closeMenu" class="close-menu" type="button" aria-label="Fechar menu">×</button>
         </div>
         <nav>
@@ -40,6 +40,7 @@
             <a href="#" data-filter="decoracao">Decoração</a>
             <a href="#" data-filter="escritorio">Escritório</a>
             <a href="#" data-filter="bem-estar">Bem-estar</a>
+            <a href="#" data-filter="favoritos" class="nav-favorites">Meus Favoritos ❤️</a>
         </nav>
     </aside>
     <div id="menuOverlay" class="menu-overlay"></div>
@@ -63,6 +64,7 @@
             <div id="searchSuggestions" class="search-suggestions" aria-live="polite"></div>
         </div>
         <div class="grid-shell">
+            <h2 id="sectionTitle" class="section-title">Todos os Produtos</h2>
             <div class="grid-container" id="productGrid"></div>
         </div>
     </main>
