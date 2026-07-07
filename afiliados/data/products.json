@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "img": "../img/caixas.webp",
+    "link": "https://seulinkdeafiliado.com/produto1",
+    "title": {
+      "pt": "Cadeira Ergonômica",
+      "en": "Ergonomic Chair"
+    },
+    "btnText": {
+      "pt": "Ver oferta",
+      "en": "View offer"
+    },
+    "available": true,
+    "categoryClass": "moveis",
+    "discount": "15%"
+  },
+  {
+    "id": 2,
+    "img": "../img/caixas.webp",
+    "link": "https://seulinkdeafiliado.com/produto2",
+    "title": {
+      "pt": "Monitor Ultrawide",
+      "en": "Ultrawide Monitor"
+    },
+    "btnText": {
+      "pt": "Ver oferta",
+      "en": "View offer"
+    },
+    "available": true,
+    "categoryClass": "eletronicos",
+    "discount": "10%"
+  },
+  {
+    "id": 3,
+    "img": "../img/caixas.webp",
+    "link": "https://seulinkdeafiliado.com/produto3",
+    "title": {
+      "pt": "Teclado Mecânico",
+      "en": "Mechanical Keyboard"
+    },
+    "btnText": {
+      "pt": "Ver oferta",
+      "en": "View offer"
+    },
+    "available": true,
+    "categoryClass": "eletronicos",
+    "discount": "12%"
+  },
+  {
+    "id": 4,
+    "img": "../img/caixas.webp",
+    "link": "https://seulinkdeafiliado.com/produto4",
+    "title": {
+      "pt": "Webcam 4K",
+      "en": "4K Webcam"
+    },
+    "btnText": {
+      "pt": "Ver oferta",
+      "en": "View offer"
+    },
+    "available": false,
+    "categoryClass": "eletronicos",
+    "discount": "20%"
+  },
+  {
+    "id": 5,
+    "img": "../img/caixas.webp",
+    "link": "https://seulinkdeafiliado.com/produto5",
+    "title": {
+      "pt": "Headset Sem Fio",
+      "en": "Wireless Headset"
+    },
+    "btnText": {
+      "pt": "Ver oferta",
+      "en": "View offer"
+    },
+    "available": true,
+    "categoryClass": "eletronicos",
+    "discount": "18%"
+  },
+  {
+    "id": 6,
+    "img": "../img/caixas.webp",
+    "link": "https://seulinkdeafiliado.com/produto6",
+    "title": {
+      "pt": "Mesa de Escritório",
+      "en": "Office Desk"
+    },
+    "btnText": {
+      "pt": "Ver oferta",
+      "en": "View offer"
+    },
+    "available": true,
+    "categoryClass": "moveis",
+    "discount": "14%"
+  },
+  {
+    "id": 7,
+    "img": "../img/caixas.webp",
+    "link": "https://seulinkdeafiliado.com/produto7",
+    "title": {
+      "pt": "Luminária LED",
+      "en": "LED Lamp"
+    },
+    "btnText": {
+      "pt": "Ver oferta",
+      "en": "View offer"
+    },
+    "available": false,
+    "categoryClass": "materiais",
+    "discount": "7%"
+  },
+  {
+    "id": 8,
+    "img": "../img/caixas.webp",
+    "link": "https://seulinkdeafiliado.com/produto8",
+    "title": {
+      "pt": "Estojo de Organização",
+      "en": "Organization Case"
+    },
+    "btnText": {
+      "pt": "Ver oferta",
+      "en": "View offer"
+    },
+    "available": true,
+    "categoryClass": "materiais",
+    "discount": "8%"
+  },
+  {
+    "id": 9,
+    "img": "../img/caixas.webp",
+    "link": "https://seulinkdeafiliado.com/produto9",
+    "title": {
+      "pt": "Notebook Portátil",
+      "en": "Laptop"
+    },
+    "btnText": {
+      "pt": "Ver oferta",
+      "en": "View offer"
+    },
+    "available": true,
+    "categoryClass": "eletronicos",
+    "discount": "25%"
+  },
+  {
+    "id": 10,
+    "img": "../img/caixas.webp",
+    "link": "https://seulinkdeafiliado.com/produto10",
+    "title": {
+      "pt": "Carregador Sem Fio",
+      "en": "Wireless Charger"
+    },
+    "btnText": {
+      "pt": "Ver oferta",
+      "en": "View offer"
+    },
+    "available": true,
+    "categoryClass": "eletronicos",
+    "discount": "9%"
+  }
+]
