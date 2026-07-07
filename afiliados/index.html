@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Minimalista</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <button id="menuToggle" class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <h1 class="title-word-effect" data-i18n="title">Catálogo de Produtos</h1>
+        </div>
+        <div class="header-actions">
+            <button id="themeToggle" type="button" class="lamp-toggle" aria-label="Alternar tema" aria-pressed="false">
+                <span class="lamp-cord"></span>
+                <span class="lamp-base">
+                    <span class="lamp-glow"></span>
+                </span>
+            </button>
+            <button id="langToggle" type="button">EN / PT</button>
+        </div>
+    </header>
+
+    <aside id="sideMenu" class="side-menu" aria-hidden="true">
+        <div class="side-menu-header">
+            <h2>Pesquisa</h2>
+            <button id="closeMenu" class="close-menu" type="button" aria-label="Fechar menu">×</button>
+        </div>
+        <nav>
+            <a href="#" data-filter="all">Todos</a>
+            <a href="#" data-filter="eletronicos">Eletrônicos</a>
+            <a href="#" data-filter="materiais">Materiais</a>
+            <a href="#" data-filter="moveis">Móveis</a>
+            <a href="#" data-filter="decoracao">Decoração</a>
+            <a href="#" data-filter="escritorio">Escritório</a>
+            <a href="#" data-filter="bem-estar">Bem-estar</a>
+        </nav>
+    </aside>
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <div id="pageLoader" class="page-loader active" aria-live="polite">
+        <div class="loader-pill" role="status" aria-label="Carregando catálogo">
+            <div class="loader-hexagon">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="catalog-toolbar">
+            <input id="searchInput" class="search-input" type="search" placeholder="Buscar produto..." aria-label="Buscar produto">
+            <div id="searchSuggestions" class="search-suggestions" aria-live="polite"></div>
+        </div>
+        <div class="grid-shell">
+            <div class="grid-container" id="productGrid"></div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>Links de afiliados com foco em ofertas boas, selecionadas para trazer mais valor a você.</p>
+    </footer>
+
+    <script type="module" src="../js/app.js"></script>
+</body>
+</html>
