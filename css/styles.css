@@ -8,6 +8,7 @@
     --button-text: #ffffff;
     --button-hover-bg: #ffffff;
     --button-hover-text: #000000;
+    --heart-color: #ff3366;
 }
 
 * {
@@ -22,7 +23,7 @@ body {
     padding: 0;
     -webkit-font-smoothing: antialiased;
     transition: background-color 0.3s ease, color 0.3s ease;
-    cursor: url('../img/up-sign.png') 0 0, pointer;
+    cursor: url('img/up-sign.png') 0 0, pointer;
 }
 
 body.is-loading main {
@@ -170,7 +171,7 @@ button {
     color: var(--button-text);
     border: 2px solid var(--text-color);
     padding: 8px 16px;
-    cursor: url("../img/hand.png") 0 0, pointer;
+    cursor: url("img/hand.png") 0 0, pointer;
     font-weight: bold;
     transition: all 0.2s ease;
 }
@@ -215,7 +216,6 @@ button:hover {
     transform: rotate(14deg);
 }
 
-/* Classes de gatilho que o JS vai injetar */
 .lamp-cord.is-animating-on {
     animation: ragdoll-cord-on 0.6s ease-in-out 1;
 }
@@ -224,24 +224,22 @@ button:hover {
     animation: ragdoll-cord-off 0.6s ease-in-out 1;
 }
 
-/* IDA: Sai de -14deg (claro), passa do ponto e assenta em 14deg (escuro) */
 @keyframes ragdoll-cord-on {
     0%   { transform: rotate(-14deg); }
-    25%  { transform: rotate(24deg);  } /* Puxada forte passando do ponto */
-    45%  { transform: rotate(4deg);   } /* Balanço de volta */
-    65%  { transform: rotate(18deg);  } /* Quase parando */
+    25%  { transform: rotate(24deg);  }
+    45%  { transform: rotate(4deg);   }
+    65%  { transform: rotate(18deg);  }
     85%  { transform: rotate(12deg);  }
-    100% { transform: rotate(14deg);  } /* Ponto final escuro */
+    100% { transform: rotate(14deg);  }
 }
 
-/* VOLTA: Sai de 14deg (escuro), passa do ponto e assenta em -14deg (claro) */
 @keyframes ragdoll-cord-off {
     0%   { transform: rotate(14deg);  }
-    25%  { transform: rotate(-24deg); } /* Puxada forte pro outro lado */
+    25%  { transform: rotate(-24deg); }
     45%  { transform: rotate(-4deg);  }
     65%  { transform: rotate(-18deg); }
     85%  { transform: rotate(-12deg); }
-    100% { transform: rotate(-14deg); } /* Ponto final claro */
+    100% { transform: rotate(-14deg); }
 }
 
 .lamp-base {
@@ -287,7 +285,6 @@ body[data-theme="dark"] .lamp-toggle[aria-pressed="true"] .lamp-base {
     background: #ffef9a;
 }
 
-/* Container Responsivo para Celular e Desktop */
 .catalog-toolbar {
     padding: 24px 5% 0;
     max-width: 420px;
@@ -303,7 +300,7 @@ body[data-theme="dark"] .lamp-toggle[aria-pressed="true"] .lamp-base {
     font-size: 0.95rem;
     outline: none;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    cursor: url('../img/text.png') 0 0, text;
+    cursor: url('img/text.png') 0 0, text;
 }
 
 .search-input:focus {
@@ -338,11 +335,21 @@ body[data-theme="dark"] .lamp-toggle[aria-pressed="true"] .lamp-base {
     color: var(--text-color);
     text-align: left;
     font-size: 0.95rem;
-    cursor: url("../img/hand.png") 0 0, pointer;
+    cursor: url("img/hand.png") 0 0, pointer;
 }
 
 .search-suggestion:hover {
     background: var(--hover-bg);
+}
+
+/* Título dinâmico da seção */
+.section-title {
+    padding: 0 5%;
+    margin-top: 24px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .grid-shell {
@@ -353,7 +360,7 @@ body[data-theme="dark"] .lamp-toggle[aria-pressed="true"] .lamp-base {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    padding: 40px 5%;
+    padding: 20px 5% 40px;
     transition: opacity 0.2s ease;
 }
 
@@ -361,25 +368,80 @@ body[data-theme="dark"] .lamp-toggle[aria-pressed="true"] .lamp-base {
     opacity: 0;
 }
 
-/* Cartão do Produto */
+/* Cartão do Produto - Efeito Curtir */
 .product-card {
     position: relative;
     border: 1px solid var(--border-color);
     padding: 20px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
-    cursor: url("../img/grab.png") 0 0, pointer;
+    cursor: url("img/grab.png") 0 0, pointer;
     text-decoration: none;
     color: inherit;
     display: flex;
     flex-direction: column;
     align-items: center;
+    user-select: none; /* Previne seleção de texto ao clicar duas vezes */
+    overflow: hidden;
 }
 
 .product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     background-color: var(--hover-bg);
+}
+
+/* Ícone permanente de favorito (opcional, mostra se está favoritado) */
+.persistent-heart {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    fill: var(--heart-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+}
+
+.product-card.is-favorite .persistent-heart {
+    opacity: 1;
+}
+
+/* Animação do clique duplo */
+.heart-burst {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    fill: var(--heart-color);
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 10;
+    pointer-events: none;
+    animation: heartBurstAnim 0.8s ease-out forwards;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+}
+
+@keyframes heartBurstAnim {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    15% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    30% {
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+    45% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
 }
 
 .store-icon {
@@ -469,9 +531,6 @@ body[data-theme="dark"] .lamp-toggle[aria-pressed="true"] .lamp-base {
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 1px;
-}
-
-.product-btn {
     transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
@@ -479,11 +538,7 @@ body[data-theme="dark"] .lamp-toggle[aria-pressed="true"] .lamp-base {
     background: var(--text-color);
     color: var(--bg-color);
     transform: translateY(-1px);
-    cursor: url('../img/grab.png') 0 0, pointer;
-}
-
-.product-card:hover {
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    cursor: url('img/grab.png') 0 0, pointer;
 }
 
 .side-menu {
@@ -524,7 +579,20 @@ body[data-theme="dark"] .lamp-toggle[aria-pressed="true"] .lamp-base {
     text-decoration: none;
     font-weight: bold;
     padding: 8px 0;
-    cursor: url("../img/up-sign.png") 0 0, pointer;
+    cursor: url("img/up-sign.png") 0 0, pointer;
+    transition: color 0.2s ease;
+}
+
+.side-menu a:hover {
+    color: var(--heart-color);
+}
+
+/* Destaque para o menu Favoritos */
+.nav-favorites {
+    margin-top: 10px;
+    padding-top: 18px !important;
+    border-top: 2px dashed var(--border-color);
+    color: var(--heart-color) !important;
 }
 
 .menu-overlay {
@@ -544,7 +612,7 @@ body[data-theme="dark"] .lamp-toggle[aria-pressed="true"] .lamp-base {
 
 .empty-state {
     grid-column: 1 / -1;
-    padding: 32px 24px;
+    padding: 40px 24px;
     text-align: center;
     border: 1px dashed var(--border-color);
     border-radius: 20px;
@@ -579,7 +647,6 @@ body[data-theme="dark"] .lamp-toggle[aria-pressed="true"] .lamp-base {
     opacity: 0.8;
 }
 
-/* Ajustes finos para telas muito pequenas */
 @media (max-width: 480px) {
     header {
         flex-direction: column;
