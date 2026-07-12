@@ -97,7 +97,7 @@ function renderSuggestions() {
     }
 
     const matches = products
-        .filter(prod => matchesTitleSearch(prod.title[currentLang], trimmed))
+        .filter(prod => prod.title[currentLang] === trimmed)
         .slice(0, 5);
 
     if (matches.length === 0) {
@@ -111,23 +111,8 @@ function renderSuggestions() {
     `).join('');
 
     suggestionsBox.style.display = 'block';
-
-    suggestionsBox.querySelectorAll('.search-suggestion').forEach(button => {
-        button.addEventListener('click', () => {
-            const selectedId = Number(button.getAttribute('data-product-id'));
-            const selectedProduct = products.find(prod => prod.id === selectedId);
-            if (selectedProduct) {
-                searchTerm = selectedProduct.title[currentLang];
-                const searchInput = document.getElementById('searchInput');
-                if (searchInput) {
-                    searchInput.value = selectedProduct.title[currentLang];
-                }
-                renderProducts();
-                renderSuggestions();
-            }
-        });
-    });
 }
+
 
 // Lida com o clique duplo no cartão (curtida estilo instagram / remover curtida)
 function handleDoubleTap(e, productId, cardElement) {
